@@ -5,17 +5,17 @@
     top: 23vh;
 }
 .containerLand{
+    position: absolute;
     background-image: url('https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     ////////////////////////
     display:flex;
-    flex-direction:row;
     justify-content:center;
     
     height:100vh; /*Este valor lo puedes omitir si la altura de tu componente esta definida*/
-
+    width: 100vw;
     animation-name: opacidad;
     animation-duration: 4s;
 }
@@ -25,9 +25,11 @@
 }
 
 .landing {
+    position: absolute;
     height: 57%;
+    text-align: center;
     color: #051627;
-    margin-top: 20%;
+    top: 30%;
     -webkit-text-stroke: 2px rgba(0, 195, 255, 0.604);
     font-size: 3vh;
 }
@@ -45,9 +47,6 @@
     cursor: pointer;
 }
 .btnLand{
-    margin-left: 45%;
-    height: 6vh;
-    width: 7vw;
     @include buttonDefault()
     
 }

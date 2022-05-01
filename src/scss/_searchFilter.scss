@@ -3,9 +3,9 @@
     // background-color: #adbfd1;
 	background-color: #192129;
 	box-shadow: 5px 5px 30px 5px rgba(51, 43, 124, 0.556);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-evenly;
     top: 5.5vh;
     height: 8vh;
 	margin-left: 50%;
@@ -18,8 +18,9 @@
 }
 //SERACH
 .search{
-    position: relative;
+    position: absolute;
     top: 2vh;
+	right: 10%;
 }
 .search input{
     display: inline-block;
@@ -58,10 +59,12 @@
 
 //FILTER
 .selectors {
-    position: relative;
+    position: absolute;
     top: 2vh;
+	left: 5%;
 }
 .selectors select{
+	
     display: inline-block;
   	height: 4vh;
   	outline: 0; 

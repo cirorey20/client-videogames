@@ -24,7 +24,7 @@ const Landing = () => {
                     <div className="containerLand">
                                             
                         <div className="landing">
-                            <h1>Bienvenidos a mi Api-Videogames</h1>
+                            <h1>VideogamesApp</h1>
                             <Link to ='/home'>
                                 <button className="btnLand">Ingresar</button>
                             </Link>

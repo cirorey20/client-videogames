@@ -10,7 +10,7 @@ export const DETAILS_GAME = "DETAILS_GAME";
 export const CREATED_GAME = "CREATED_GAME";
 export const GENRES_GAMES = "GENRES_GAMES";
 export const CLEAR_DATA = "CLEAR_DATA";
- 
+
 export function getVideogames(){
    return function(dispatch){
     axios.get('http://localhost:3001/videogames')
