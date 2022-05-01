@@ -1,0 +1,25 @@
+.containerParentNav {
+    position: relative;
+    background-color: #192129;
+    // box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logoNav{
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+.logoNav h3{
+    color: #adbfd1;
+}
+.titleNav h1{
+    color: #adbfd1;
+}
+.createdNav{
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+.createdNav h3{
+    color: #adbfd1;
+}

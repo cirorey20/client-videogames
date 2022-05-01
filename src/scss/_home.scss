@@ -1,0 +1,24 @@
+.preload{
+    color: chartreuse;
+    background-image: url("https://www.immagarcia.com/assets/img/loading.gif");
+    height: 26vh;
+    width: 50vw;
+
+    
+    margin-top: 10%;
+
+    border-radius: 20px;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:flex-end;
+    align-content:stretch;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 5px 5px 30px 5px rgba(43, 124, 73, 0.7);
+}

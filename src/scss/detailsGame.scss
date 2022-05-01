@@ -1,0 +1,64 @@
+.containerDetails{
+    background-color: #192129;
+    height: 80vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    left: 0;
+}
+//DATA
+.detailsData{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 30vw;
+    margin: 0.9%;
+    justify-content: center;
+    color: #f0f0f0;
+    margin-top: 20vh;
+}
+
+//IMG
+.detailsImg {
+    background-color: #192129;
+    // border: solid 1px #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 10px 20px 60px 30px rgba(0, 0, 0, 0.2);
+    height: 50vh;
+    width: 30vw;
+    margin: 0.9%;
+    text-align: center;
+    margin-top: 20vh;
+}
+.detailsImg img {
+    height: 90%;
+    width: 90%;
+    border-radius: 50px;
+    margin-top: 25px;
+}
+
+.preloadDetails{
+    color: chartreuse;
+    background-image: url("https://www.immagarcia.com/assets/img/loading.gif");
+    height: 26vh;
+    width: 50%;
+
+    
+    margin-top: 15%;
+    margin-left: 25vw;
+
+    border-radius: 40px;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 5px 5px 30px 5px rgba(43, 124, 73, 0.7);
+}

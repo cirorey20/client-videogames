@@ -1,0 +1,102 @@
+.formParent{
+    position: relative;
+    background-color: #192129;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    flex-direction: column;
+    flex-flow: row wrap;
+    top: 5vh;
+    left: 30vw;
+    border-radius: 25px;
+}
+.contForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    // width: 40vw;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f0f0f0;
+}
+.containerInput input{
+    display: inline-block;
+  	height: 3vh;
+    width: 30vw;
+  	outline: 0; 
+  	border: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 22px;
+
+    transition: all 0.25s ease;
+    margin-right: 5px;
+}
+.containerInput textarea{
+    display: inline-block;
+  	height: 6vw;
+    width: 30vw;
+  	outline: 0; 
+  	border: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 22px;
+
+    transition: all 0.25s ease;
+    margin-right: 5px;
+}
+.containerSelectors {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.2%;
+    justify-content: space-evenly;
+    color: #f0f0f0;
+}
+.gen {
+    margin: 2%;
+}
+.plat{
+    margin: 2px;
+}
+.contForm button {
+    margin-left: 35%;
+}
+
+.contForm button {
+    display: inline-block;
+    height: 3.7vh;
+    outline: 0; 
+    border: 0;
+	background: #5d6e83;
+	font-size: 1em;
+	color: rgb(238, 220, 220);
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 22px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.contForm button:hover {
+    background-color: rgb(108, 152, 209);
+}
+.errors {
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.errors p {
+    color: red;
+}
