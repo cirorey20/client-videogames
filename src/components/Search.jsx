@@ -27,8 +27,8 @@ const Search = ({setPaginaActual}) => {
         <Fragment>
             <div className='search'>
                 <form action="" onSubmit={(e)=>handlerSubmit(e)}>
-                    <input type="text" value={search} onChange={(e)=>handlerGame(e)}/>
-                    <button>Search</button>
+                    <input type="text" value={search} placeholder='Search' onChange={(e)=>handlerGame(e)}/>
+                    {/* <button>Search</button> */}
                 </form>
             </div>
         </Fragment>

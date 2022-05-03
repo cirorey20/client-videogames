@@ -1,0 +1,69 @@
+.titleDashboard{
+    color: #adbfd1;
+    text-align: center;
+}
+.createdDashboard{
+    text-align: center;
+}
+.createdDashboard h3{
+    color: #2bba4f;
+}
+.createdDashboard h3:hover{
+    color: #4df377;
+}
+.containerGameDash{
+    border-radius: 20px;
+    border: solid 1px #f0f0f0;
+    height: 20%;
+    width: 20%;
+    margin: 0.9%;
+    text-align: center;
+    color: #f0f0f0;
+    
+    animation-name: opacidad;
+    animation-duration: 1s;
+}
+.containerGameDash img {
+    height: 20%;
+    width: 80%;
+    margin-top: 3%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px 5px rgba(51, 43, 124, 0.556);
+    transition: 0.9s;
+}
+.containerGameDash img:hover {
+    box-shadow: 5px 5px 30px 5px rgba(43, 124, 73, 0.7);
+}
+.contentUserGame{
+    position: relative;
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.contentUserGame button {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 3%;
+
+    outline: 0; 
+    border: 0;
+    display: inline-block;
+    font-size: 1em;
+    font-family: 
+    'Quicksand', sans-serif;
+    border:2px solid rgba(0,0,0,0.2);
+    border-radius: 22px;
+    transition: all 0.25s ease;
+    margin-right: 5px;
+}
+
+.contentUserGame button:hover {
+    // position: relative;
+    background-color: rgb(87, 121, 214);
+    color: #f0f0f0;
+}

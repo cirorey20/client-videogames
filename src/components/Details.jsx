@@ -25,7 +25,7 @@ const Details = (props) => {
                         <div className='containerDetails'>
                             <div className='detailsData'>
                                 <h1>{details.name}</h1>
-                                <div>{details.description}</div> <br />
+                                <div className='description'>{details.description}</div> <br />
                                 <div><strong>Released:</strong> {details.released}</div>
                                 <div><strong>Rating:</strong> {details.rating}</div>
                                 <div><strong>Platforms:</strong> {details.platforms}</div>

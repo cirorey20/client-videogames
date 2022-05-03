@@ -49,22 +49,29 @@ const Dashboard = () => {
     return (
         <Fragment>
             <Nav current="Dashboard"/>
-            <h1>Hello {dataUser.name || "HEYHEYHEY"}, games you have:{gamesUser.length}</h1>
-            <Link to='/created'>
-                <h3>Created</h3>
-            </Link>
+
+            <h2 className='titleDashboard'>Hello {dataUser.name || "user"}, games you have are: {gamesUser.length}</h2>
+            <div className='createdDashboard'>
+                <Link to='/created' style={{ textDecoration: 'none' }}>
+                    <h3>Created</h3>
+                </Link>
+            </div>
+            <div className='contentUserGame'>
             {
                 gamesUser?.map((el,i)=>{
-                    return(
-                        <div key={i} className="containerGame">
-                            <p>{el.name}</p>
-                            <img src={el.img} alt="not-found" />
-                            <button onClick={()=>deletedGame(el.id)}>Deleted</button>
-                            <button onClick={()=>editGame(el.id)}>Edit</button>
+                return(
+                    <div key={i} className="containerGameDash">
+                        <p>{el.name}</p>
+                        <img src={el.img} alt="not-found" />
+                        <div className='buttonDash'>
+                            <button  onClick={()=>deletedGame(el.id)}>Deleted</button>
+                            <button  onClick={()=>editGame(el.id)}>Edit</button>
                         </div>
-                    )
+                    </div>
+                )
                 })
             }
+            </div>
         </Fragment>
     )
 

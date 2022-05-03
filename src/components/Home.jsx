@@ -65,15 +65,15 @@ const Home = () => {
         <Fragment>
             <Nav current="Videogames - App"/>
             <div className='searchFilterParent'>
+                <Search 
+                    setPaginaActual={setPaginaActual}
+                /><br/>
                 <Filter 
                     handleGenres={handleGenres}
                     handleSortAlpha={handleSortAlpha}
                     handleCreated={handleCreated}
                     handleFilterRating={handleFilterRating}
                     allGenres={allGenres}
-                />
-                <Search 
-                    setPaginaActual={setPaginaActual}
                 />
             </div>
             <div className='containerParentPaged'>
