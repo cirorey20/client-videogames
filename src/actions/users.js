@@ -7,7 +7,7 @@ export const CLEAR_USERGAME = "CLEAR_USERGAME";
 // export const DELETED_GAME_USER = "DELETED_GAME_USER";
  
 export function auth(payload){
-    const urlLog = `https://fast-plateau-08546.herokuapp.com/auth/login`;
+    const urlLog = `http://localhost:3001/auth/login`;
    return async function(dispatch){
        try {   
             const rta = await axios.post(urlLog, payload)
@@ -34,7 +34,7 @@ export function auth(payload){
 }
 
 export function register(payload){
-    const urlLog = `https://fast-plateau-08546.herokuapp.com/users`;
+    const urlLog = `http://localhost:3001/users`;
    return async function(dispatch){
        try {   
             const rta = await axios.post(urlLog, payload)
@@ -55,7 +55,7 @@ export function register(payload){
 }
  
 export function getUser(id){
-    const urlUser = `https://fast-plateau-08546.herokuapp.com/users/`;
+    const urlUser = `http://localhost:3001/users/`;
    return async function(dispatch){
        try {   
             const rta = await axios.get(urlUser+id)
@@ -72,7 +72,7 @@ export function getUser(id){
 }
 
 export function destroyGame(id, token) {
-    const urlDeleted = `https://fast-plateau-08546.herokuapp.com/videogames/`;
+    const urlDeleted = `http://localhost:3001/videogames/`;
     return async function(dispatch){
         try {
             await axios.delete(urlDeleted+id, {
@@ -89,7 +89,7 @@ export function destroyGame(id, token) {
 }
 
 export function uploadGame(id, payload, token) {
-    const urlUpload = `https://fast-plateau-08546.herokuapp.com/videogames/`;
+    const urlUpload = `http://localhost:3001/videogames/`;
     return async function(dispatch){
         try {
             await axios.patch(urlUpload+id, payload, {

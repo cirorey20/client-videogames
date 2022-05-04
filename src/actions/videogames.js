@@ -13,7 +13,7 @@ export const CLEAR_DATA = "CLEAR_DATA";
 
 export function getVideogames(){
    return function(dispatch){
-    axios.get('https://fast-plateau-08546.herokuapp.com/videogames')
+    axios.get('http://localhost:3001/videogames')
         .then((json)=>{
             return dispatch({
                 type: GET_VIDEOGAMES,
@@ -29,7 +29,7 @@ export function searchGame(name) {
     return async function(dispatch) {
         try {
             
-            var json = await axios.get(`https://fast-plateau-08546.herokuapp.com/videogames?name=${name}`, {
+            var json = await axios.get(`http://localhost:3001/videogames?name=${name}`, {
     
             })
             return dispatch({
@@ -79,7 +79,7 @@ export function orderRating(payload) {
 export function detailGame(id) {
     return async function(dispatch) {
         try {
-            const detailById = await axios.get(`https://fast-plateau-08546.herokuapp.com/videogame/${id}`,{
+            const detailById = await axios.get(`http://localhost:3001/videogame/${id}`,{
 
             });
             return dispatch({
@@ -97,7 +97,7 @@ export function newGame(payload, token) {
     return async function(dispatch) {
         try {
             
-            const res = await axios.post("https://fast-plateau-08546.herokuapp.com/videogame", payload, 
+            const res = await axios.post("http://localhost:3001/videogame", payload, 
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -116,7 +116,7 @@ export function newGame(payload, token) {
 
 export function getGenres() {
     return async function(dispatch) {
-        const genres = await axios.get('https://fast-plateau-08546.herokuapp.com/genres', {
+        const genres = await axios.get('http://localhost:3001/genres', {
 
         })
         return dispatch({
