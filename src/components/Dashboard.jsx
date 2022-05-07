@@ -60,8 +60,8 @@ const Dashboard = () => {
             {
                 gamesUser?.map((el,i)=>{
                 return(
-                    <div className='col-md-3 col-sm-6'>
-                        <div key={i} className="card">
+                    <div key={i} className='col-md-3 col-sm-6'>
+                        <div  className="card">
                             <p>{el.name}</p>
                             <img src={el.img} alt="not-found" />
                             <div className='text-center '>
