@@ -63,8 +63,8 @@ const Home = () => {
 
     return (
         <Fragment>
-            <Nav current="Videogames - App"/>
-            <div className='searchFilterParent'>
+            <Nav current="Videogames"/>
+            <div className='searchFilterParent mb-4'>
                 <Search 
                     setPaginaActual={setPaginaActual}
                 /><br/>
@@ -76,45 +76,49 @@ const Home = () => {
                     allGenres={allGenres}
                 />
             </div>
-            <div className='containerParentPaged'>
+            <div className='Page navigation example'>
                 <Paged 
                     gamesDePagina={gamesDePagina}
                     allVideogames={allVideogames.length}
                     paged={paged}
                 />
             </div>   
-            <div className='containerParentGames'>
-                {
+            <div className='container-fluid '>
+                <div className='row d-flex justify-content-center'>
+
+                    {
                     allVideogames.length <= 0 ?
                     
                         <div className='preload'></div>
                     :
                     gamesActuales.map((el, index) => {
+                    return (
                         
-                        return (
+                        <div key={index} className='col-md-3 col-sm-6 '>
                             
-
-                            <div key={index} className='containerGame'>
+                            <div  className='card m-2'>
                                 <h3>{el.name}</h3>
                                 <Link to={'/videogame/'+el.id} style={{ textDecoration: 'none' }}>
                                     
-                                    <img src={el.img} alt="NOT-FOUND" />
+                                    <img src={el.img} className='card-img-top' alt="NOT-FOUND" />
                                     
                                 </Link>
-                                
-                                {
-                                    el.genres?.map((e,i)=>{
-                                        return<p key={i}><em>{e}</em></p>
-                                    })
-                                }
-                                <p><strong>{el.rating?el.rating:null}</strong></p>
+                                <div className='card-body text-center'>
+                                    {
+                                        el.genres?.map((e,i)=>{
+                                            return<p key={i}><em>{e}</em></p>
+                                        })
+                                    }
+                                    <p><strong>{el.rating?el.rating:null}</strong></p>
+                                </div>
                             </div>
-                            
-                        )
+                        </div>
+                        
+                    )
                     }) 
 
-
-                }
+                    }
+                </div>
             </div>
         </Fragment>
     )

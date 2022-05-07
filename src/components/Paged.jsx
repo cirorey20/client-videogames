@@ -11,20 +11,20 @@ const Paged = ({gamesDePagina, allVideogames, paged}) => {
 
     return (
         <Fragment>
-            {/* <div className=""> */}
-            <ul>
+            <div className="d-flex justify-content-center containerParentPagedd">
+            <ul className='pagination'>
                 {
                     pageNumbers?
                     pageNumbers.map((num, index) => (
-                        <li key={index}>
-                            <a href={'#'+num} onClick={()=>paged(num)}>{num}</a>
+                        <li className='page-item' key={index}>
+                            <a className="page-link" href={'#'+num} onClick={()=>paged(num)}>{num}</a>
                         </li>
                     ))
                     :
                     <span></span>
                 }
             </ul>
-           {/* </div> */}
+           </div>
         </Fragment>
     )
 }

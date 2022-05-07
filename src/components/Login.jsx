@@ -3,6 +3,7 @@ import Nav from './Nav';
 import {useHistory} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import { auth } from '../actions/users';
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -44,9 +45,12 @@ const Login = () => {
     return(
         <Fragment>
             <Nav current="Login"/>
+            <div className="d-flex justify-content-center">
+
             {
                 ! isPre ?
                 (
+            <div>
 
                 <div className='contForm'>
                         
@@ -76,16 +80,24 @@ const Login = () => {
                             </div>
                             <br />
                             <button type='submit'>Sing In</button>
+                            <div className="text-center pb-4">
+                                <p className="mt-3" style={{color: '#f0f0f0'}}>OR</p>
+                                <Link to={'/register'} style={{ textDecoration: 'none', color: '#f0f0f0' }}>
+                                    <p className="pb-3">Register</p>
+                                </Link>
+                            </div>
                             <br /> <br />
 
                         </form>
                 </div>
+            </div>
                 )
                 :
                 (
                     pre
                 )
             }
+            </div>
         </Fragment>
     )
 }

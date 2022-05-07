@@ -53,19 +53,21 @@ const Dashboard = () => {
             <h2 className='titleDashboard'>Hello {dataUser.name || "user"}, games you have are: {gamesUser.length}</h2>
             <div className='createdDashboard'>
                 <Link to='/created' style={{ textDecoration: 'none' }}>
-                    <h3>Created</h3>
+                    <button className='btn btn-success m-2'>Created</button>
                 </Link>
             </div>
-            <div className='contentUserGame'>
+            <div className='row d-flex justify-content-center container-fluid'>
             {
                 gamesUser?.map((el,i)=>{
                 return(
-                    <div key={i} className="containerGameDash">
-                        <p>{el.name}</p>
-                        <img src={el.img} alt="not-found" />
-                        <div className='buttonDash'>
-                            <button  onClick={()=>deletedGame(el.id)}>Deleted</button>
-                            <button  onClick={()=>editGame(el.id)}>Edit</button>
+                    <div className='col-md-3 col-sm-6'>
+                        <div key={i} className="card">
+                            <p>{el.name}</p>
+                            <img src={el.img} alt="not-found" />
+                            <div className='text-center '>
+                                <button className='btn btn-outline-danger m-2' onClick={()=>deletedGame(el.id)}>Deleted</button>
+                                <button className='btn btn-outline-warning' onClick={()=>editGame(el.id)}>Edit</button>
+                            </div>
                         </div>
                     </div>
                 )

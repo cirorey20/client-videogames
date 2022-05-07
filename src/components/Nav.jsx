@@ -18,7 +18,7 @@ const Nav = ({current}) => {
     useEffect(()=>{
         const isUser = localStorage.getItem('payload');
         if(!isUser){
-            setIsLog('Login/Resgister');
+            setIsLog('Login/Register');
         } else {
             setIsLog('Logout');
         }
@@ -26,36 +26,40 @@ const Nav = ({current}) => {
 
     return (
         <Fragment>
-            <div className='fixed'>
+            <div className='navbar navbar-expand-lg'>
 
-                <div className='containerParentNav'>
-                    <div className='logoNav'>
+                <div className='container-fluid'>
+                    <div className='navbar-brand' >
                         <Link to='/home' style={{ textDecoration: 'none' }}>
-                            <h3>VideoGames</h3>
+                            <h3 className='color-nav'>VideoGames</h3>
                         </Link>
                     </div>
-                    <div className='titleNav'>
+                    {/* <div className=''>
                         <h1>{current}</h1>
+                    </div> */}
+                    <div className='' >
+                        <ul className=''>
+                        <li className=''>
+                            <span className=''>
+                                <Link to='' style={{ textDecoration: 'none' }}>
+                                    <h3 className='color-nav' onClick={out}>{isLog}</h3>
+                                </Link>
+                            </span>
+                            {
+                                isLog === 'Logout' ?
+                                (
+                                    <span className=''>
+                                        <Link to='/dashboard' style={{ textDecoration: 'none' }}>
+                                            <h3 className='color-nav'>Dashboard</h3>
+                                        </Link>
+                                    </span>
+                                )
+                                :
+                                <span></span>
+                            }
+                        </li>
+                        </ul>
                     </div>
-                    <span className='createdNav'>
-                        <span>
-                            <Link to='' style={{ textDecoration: 'none' }}>
-                                <h3 onClick={out}>{isLog}</h3>
-                            </Link>
-                        </span>
-                        {
-                            isLog === 'Logout' ?
-                            (
-                                <span>
-                                    <Link to='/dashboard' style={{ textDecoration: 'none' }}>
-                                        <h3 >Dashboard</h3>
-                                    </Link>
-                                </span>
-                            )
-                            :
-                            <span></span>
-                        }
-                    </span>
 
                 </div>
             </div>
