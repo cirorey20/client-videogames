@@ -56,7 +56,6 @@ const Nav = ({current}) => {
                             <span></span>
                         }
                     </span>
-
                 </div>
             </div>
         </Fragment>
