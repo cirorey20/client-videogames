@@ -82,7 +82,7 @@ const Login = () => {
                             <button type='submit'>Sing In</button>
                             <div className="text-center pb-4">
                                 <p className="mt-3" style={{color: '#f0f0f0'}}>OR</p>
-                                <Link to={'/register'} style={{ textDecoration: 'none', color: '#f0f0f0' }}>
+                                <Link className="btregister" to={'/register'} style={{ textDecoration: 'none', color: '#f0f0f0' }}>
                                     <p className="pb-3">Register</p>
                                 </Link>
                             </div>

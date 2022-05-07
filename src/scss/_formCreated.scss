@@ -88,7 +88,24 @@
     position: relative;
     transition: all 0.25s ease;
 }
-
+.btregister {
+    display: inline-block;
+    height: 3.7vh;
+    outline: 0; 
+    border: 0;
+	background: #5d6e83;
+	font-size: 1em;
+	color: rgb(238, 220, 220);
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 22px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+.btregister:hover {
+    background-color: rgb(108, 152, 209);
+}
 .contForm button:hover {
     background-color: rgb(108, 152, 209);
 }

@@ -8,7 +8,7 @@ const Nav = ({current}) => {
     const history = useHistory();
     function out(e) {
         e.preventDefault();
-        if(isLog === "Login/Resgister"){
+        if(isLog === "Login/Register"){
             history.push('/login');    
         } else{
             localStorage.clear();
@@ -34,28 +34,35 @@ const Nav = ({current}) => {
                             <h3 className='color-nav'>VideoGames</h3>
                         </Link>
                     </div>
-                    {/* <div className=''>
-                        <h1>{current}</h1>
-                    </div> */}
+                    
                     <div className='' >
                         <ul className=''>
                         <li className=''>
-                            <span className=''>
-                                <Link to='' style={{ textDecoration: 'none' }}>
-                                    <h3 className='color-nav' onClick={out}>{isLog}</h3>
-                                </Link>
-                            </span>
                             {
                                 isLog === 'Logout' ?
                                 (
-                                    <span className=''>
-                                        <Link to='/dashboard' style={{ textDecoration: 'none' }}>
-                                            <h3 className='color-nav'>Dashboard</h3>
-                                        </Link>
+                                    <span className="dropdown">
+                                        <h3 className="color-nav dropdown-toggle"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            User
+                                        </h3>
+                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <Link className='dropdown-item' to='/dashboard' style={{ textDecoration: 'none' }}>
+                                                <p className=''>Content</p>
+                                            </Link>
+                                            <Link className='dropdown-item' to='' style={{ textDecoration: 'none' }}>
+                                                <p className='' onClick={out}>{isLog}</p>
+                                            </Link>
+                                        </ul>
                                     </span>
                                 )
                                 :
-                                <span></span>
+                                (
+                                    <span className=''>
+                                        <Link to='' style={{ textDecoration: 'none' }}>
+                                            <h3 className='color-nav' onClick={out}>{isLog}</h3>
+                                        </Link>
+                                    </span>
+                                )
                             }
                         </li>
                         </ul>

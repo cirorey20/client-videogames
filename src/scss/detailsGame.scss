@@ -1,47 +1,13 @@
 .containerDetails{
-    background-color: #192129;
+    // background-color: #192129;
     height: 80vh;
+    top: 10%;
     position: relative;
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    left: 0;
-}
-//DATA
-.detailsData{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
-    width: 30vw;
-    margin: 0.9%;
-    justify-content: center;
-    color: #f0f0f0;
-    margin-top: 20vh;
-}
-
-//IMG
-.detailsImg {
-    background-color: #192129;
-    // border: solid 1px #f0f0f0;
-    border-radius: 20px;
-    box-shadow: 10px 20px 60px 30px rgba(0, 0, 0, 0.2);
-    height: 50vh;
-    width: 30vw;
-    margin: 0.9%;
-    text-align: center;
-    margin-top: 20vh;
-}
-.detailsImg img {
-    height: 90%;
-    width: 90%;
-    border-radius: 50px;
-    margin-top: 25px;
-}
-.description {
-    overflow: scroll;
-    overflow-x: hidden;
+    left: 20%;
 }
 
 .preloadDetails{
