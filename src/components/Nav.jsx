@@ -31,7 +31,7 @@ const Nav = ({current}) => {
                 <div className='container-fluid'>
                     <div className='navbar-brand' >
                         <Link to='/home' style={{ textDecoration: 'none' }}>
-                            <h3 className='color-nav'>VideoGames</h3>
+                            <h3 className='color-nav mb-3'>VideoGames</h3>
                         </Link>
                     </div>
                     

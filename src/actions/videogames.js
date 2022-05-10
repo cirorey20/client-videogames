@@ -11,9 +11,12 @@ export const CREATED_GAME = "CREATED_GAME";
 export const GENRES_GAMES = "GENRES_GAMES";
 export const CLEAR_DATA = "CLEAR_DATA";
 
+const localHost = "http://localhost:3001"
+// const localHost = "https://fast-plateau-08546.herokuapp.com"
+
 export function getVideogames(){
    return function(dispatch){
-    axios.get('http://localhost:3001/videogames')
+    axios.get(localHost+'/videogames')
         .then((json)=>{
             return dispatch({
                 type: GET_VIDEOGAMES,
@@ -29,7 +32,7 @@ export function searchGame(name) {
     return async function(dispatch) {
         try {
             
-            var json = await axios.get(`http://localhost:3001/videogames?name=${name}`, {
+            var json = await axios.get(localHost+`/videogames?name=${name}`, {
     
             })
             return dispatch({
@@ -79,7 +82,7 @@ export function orderRating(payload) {
 export function detailGame(id) {
     return async function(dispatch) {
         try {
-            const detailById = await axios.get(`http://localhost:3001/videogame/${id}`,{
+            const detailById = await axios.get(localHost+`/videogame/${id}`,{
 
             });
             return dispatch({
@@ -97,7 +100,7 @@ export function newGame(payload, token) {
     return async function(dispatch) {
         try {
             
-            const res = await axios.post("http://localhost:3001/videogame", payload, 
+            const res = await axios.post(localHost+"/videogame", payload, 
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -116,7 +119,7 @@ export function newGame(payload, token) {
 
 export function getGenres() {
     return async function(dispatch) {
-        const genres = await axios.get('http://localhost:3001/genres', {
+        const genres = await axios.get(localHost+'/genres', {
 
         })
         return dispatch({

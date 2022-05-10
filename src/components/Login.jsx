@@ -50,45 +50,48 @@ const Login = () => {
             {
                 ! isPre ?
                 (
-            <div>
+            <div className="container mt-5">
+                <div className="row d-flex justify-content-center">
+                    <div className='col-md-5'>
+                            
 
-                <div className='contForm'>
-                        
+                            <form 
+                                onSubmit={(e) => handleSubmit(e)}
+                            >
+                                <br />
+                                <div className='containerInput'>
 
-                        <form 
-                            onSubmit={(e) => handleSubmit(e)}
-                        >
-                            <br />
-                            <div className='containerInput'>
+                                    <p>Email</p>
+                                    <input 
+                                        onChange={handleChange}
+                                        type="email"
+                                        name= "username"
+                                    />
+                                </div>
 
-                                <p>Email</p>
-                                <input 
-                                    onChange={handleChange}
-                                    type="email"
-                                    name= "username"
-                                />
-                            </div>
+                                <div className='containerInput'>
 
-                            <div className='containerInput'>
+                                    <p>Password</p>
+                                    <input 
+                                        onChange={handleChange}
+                                        type='password'
+                                        name= "password"
+                                    />
+                                </div>
+                                <br />
+                                <div className="d-flex justify-content-center">
+                                    <button type="submit" className="btn btn-secondary">Sing In</button>
+                                </div>
+                                <hr />
+                                <div className="d-flex justify-content-center">
+                                    <Link className="" to={'/register'} style={{ textDecoration: 'none', color: '#f0f0f0' }}>
+                                        <p className="btn btn-outline-warning">Register</p>
+                                    </Link>
+                                </div>
+                                <br /> <br />
 
-                                <p>Password</p>
-                                <input 
-                                    onChange={handleChange}
-                                    type='password'
-                                    name= "password"
-                                />
-                            </div>
-                            <br />
-                            <button type='submit'>Sing In</button>
-                            <div className="text-center pb-4">
-                                <p className="mt-3" style={{color: '#f0f0f0'}}>OR</p>
-                                <Link className="btregister" to={'/register'} style={{ textDecoration: 'none', color: '#f0f0f0' }}>
-                                    <p className="pb-3">Register</p>
-                                </Link>
-                            </div>
-                            <br /> <br />
-
-                        </form>
+                            </form>
+                    </div>
                 </div>
             </div>
                 )

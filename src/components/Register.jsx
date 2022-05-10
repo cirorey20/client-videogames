@@ -44,6 +44,10 @@ const Register = () => {
     return(
         <Fragment>
             <Nav current="Register"/>
+            <div className="container mt-5">
+                <div className="row d-flex justify-content-center">
+                    <div className='col-md-5'>
+
             {
                 ! isPre ?
                 (
@@ -85,7 +89,10 @@ const Register = () => {
                                 />
                             </div>
                             <br />
-                            <button type='submit'>Register</button>
+                            <div className="d-flex justify-content-center">
+                                <button type="submit" className="btn btn-secondary">Register</button>
+                            </div>
+                            
                             <br /> <br />
 
                         </form>
@@ -96,6 +103,10 @@ const Register = () => {
                     pre
                 )
             }
+                    </div>
+                </div>
+            </div>
+
         </Fragment>
     )
 }

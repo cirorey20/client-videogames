@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import { uploadGame, getUser, clearData } from '../actions/users';
 import {useDispatch, useSelector} from 'react-redux';
 import Nav from './Nav';
+import TutorialGif from './TurorialGif';
 
 const Edit = () => {
 
@@ -92,9 +93,11 @@ const Edit = () => {
     return (
         <Fragment>
             <Nav current="New Game"/>
-            <div className='formParent'>
-                <div className='contForm'>
-                    
+            {/* <div className='formParent'>
+                <div className='contForm'> */}
+            <div className="container mt-5">
+                <div className="row d-flex justify-content-center">
+                    <div className='col-md-5 col-sm-8'>
 
                     <form 
                         onSubmit={(e) => handleSubmit(e)}
@@ -132,10 +135,13 @@ const Edit = () => {
                                 }
                             />
                         </div>
-
-                        <div className='containerInput'>
+                        <hr/>
+                        <div className='containerInput rounded-3 border border-secondary border-3 p-4'>
 
                             <p>Link-Img</p>
+                            <div className='text-center'>
+                                <TutorialGif/>
+                            </div>
                             <input 
                                 onChange={handleChange}
                                 type="text"
@@ -146,11 +152,13 @@ const Edit = () => {
                                     :
                                     "img"
                                 }
-                            />
-                            <button onClick={buttonLinkImg}>Show</button>
+                            /><br/>
+                            <button className='btn btn-secondary btn-sm' onClick={buttonLinkImg}>
+                                upload image
+                            </button>
                             {/* <input type="checkbox" name="Show" id="" /> */}
-                            <div className="containerGame">
-                                <img src={img} alt="" />
+                            <div className="containerGame m-4">
+                                <img className='w-50 rounded mx-auto d-block' src={img} alt="this-image-link-does-not-work" />
                             </div>
                         </div>
 
@@ -169,13 +177,21 @@ const Edit = () => {
                                 }
                             />
                         </div>
-                        <button type='submit'>Save</button>
+                        <div className='text-center mt-4'>
+                            <button className='btn btn-success' type='submit'>Save</button>
+                        </div>
                         <br /> <br />
 
                     </form>
+
+                    </div>
+
+
+                </div>
                 </div>
 
-            </div>
+                {/* </div>
+            </div> */}
         </Fragment>
     )
 }

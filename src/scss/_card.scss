@@ -1,43 +1,4 @@
-.containerParentGames {
-    // position: relative;
-    background-color: #192129;
-    // width: 100%;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-evenly;
-    // flex-wrap: wrap;
-    // top: 2vh;
-    // left: 0;
-
-    
+.card{
+    // background-color: #192129;
+    // background-color: #ffffffca;
 }
-
-
-.containerGame {
-    // border-radius: 20px;
-    // border: solid 1px #f0f0f0;
-    // height: 20%;
-    // width: 20%;
-    // margin: 0.9%;
-    // text-align: center;
-    color: #f0f0f0;
-    
-    animation-name: opacidad;
-    animation-duration: 1s;
-}
-@keyframes opacidad {
-    from {opacity: 0.0;}
-    to {opacity: 1.0;}
-}
-
-
-// .containerGame img {
-//     height: 20%;
-//     width: 80%;
-//     border-radius: 15px;
-//     box-shadow: 5px 5px 30px 5px rgba(51, 43, 124, 0.556);
-//     transition: 0.9s;
-// }
-// .containerGame img:hover {
-//     box-shadow: 5px 5px 30px 5px rgba(43, 124, 73, 0.7);
-// }

@@ -64,18 +64,27 @@ const Home = () => {
     return (
         <Fragment>
             <Nav current="Videogames"/>
-            <div className='searchFilterParent mb-4'>
-                <Search 
-                    setPaginaActual={setPaginaActual}
-                /><br/>
-                <Filter 
-                    handleGenres={handleGenres}
-                    handleSortAlpha={handleSortAlpha}
-                    handleCreated={handleCreated}
-                    handleFilterRating={handleFilterRating}
-                    allGenres={allGenres}
-                />
+            <div className="container mt-5 ">
+                <div className="row d-flex justify-content-center">
+                    <div className='col-md-6 searchFilterParent'>
+                        <div className='m-1'>
+
+                            <Search
+                                setPaginaActual={setPaginaActual}
+                            />
+                            <div className='m-2'></div>
+                            <Filter 
+                                handleGenres={handleGenres}
+                                handleSortAlpha={handleSortAlpha}
+                                handleCreated={handleCreated}
+                                handleFilterRating={handleFilterRating}
+                                allGenres={allGenres}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div className='Page navigation example'>
                 <Paged 
                     gamesDePagina={gamesDePagina}
@@ -83,7 +92,7 @@ const Home = () => {
                     paged={paged}
                 />
             </div>   
-            <div className='container-fluid '>
+            <div className='container '>
                 <div className='row d-flex justify-content-center'>
 
                     {
@@ -94,9 +103,9 @@ const Home = () => {
                     gamesActuales.map((el, index) => {
                     return (
                         
-                        <div key={index} className='col-md-3 col-sm-6 '>
+                        <div key={index} className='col-md-3 col-sm-6'>
                             
-                            <div  className='card m-2'>
+                            <div  className='card m-1'>
                                 <h3>{el.name}</h3>
                                 <Link to={'/videogame/'+el.id} style={{ textDecoration: 'none' }}>
                                     

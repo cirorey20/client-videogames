@@ -1,21 +1,3 @@
-.formParent{
-    position: relative;
-    background-color: #192129;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
-    width: 40%;
-    flex-direction: column;
-    flex-flow: row wrap;
-    top: 5vh;
-    left: 30vw;
-    border-radius: 25px;
-}
-.contForm{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5vh;
-    // width: 40vw;
-}
-
 .containerInput{
     display: flex;
     flex-direction: column;
@@ -24,8 +6,6 @@
 }
 .containerInput input{
     display: inline-block;
-  	height: 3vh;
-    width: 30vw;
   	outline: 0; 
   	border: 0;
 	background: #f0f0f0;
@@ -41,8 +21,6 @@
 }
 .containerInput textarea{
     display: inline-block;
-  	height: 6vw;
-    width: 30vw;
   	outline: 0; 
   	border: 0;
 	background: #f0f0f0;
@@ -69,46 +47,7 @@
 .plat{
     margin: 2px;
 }
-.contForm button {
-    margin-left: 35%;
-}
 
-.contForm button {
-    display: inline-block;
-    height: 3.7vh;
-    outline: 0; 
-    border: 0;
-	background: #5d6e83;
-	font-size: 1em;
-	color: rgb(238, 220, 220);
-	font-family: 
-	'Quicksand', sans-serif;
-	border:2px solid rgba(0,0,0,0.2);
-    border-radius: 22px;
-    position: relative;
-    transition: all 0.25s ease;
-}
-.btregister {
-    display: inline-block;
-    height: 3.7vh;
-    outline: 0; 
-    border: 0;
-	background: #5d6e83;
-	font-size: 1em;
-	color: rgb(238, 220, 220);
-	font-family: 
-	'Quicksand', sans-serif;
-	border:2px solid rgba(0,0,0,0.2);
-    border-radius: 22px;
-    position: relative;
-    transition: all 0.25s ease;
-}
-.btregister:hover {
-    background-color: rgb(108, 152, 209);
-}
-.contForm button:hover {
-    background-color: rgb(108, 152, 209);
-}
 .errors {
     margin-left: 30%;
     margin-top: 5%;

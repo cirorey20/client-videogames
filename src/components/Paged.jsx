@@ -11,7 +11,7 @@ const Paged = ({gamesDePagina, allVideogames, paged}) => {
 
     return (
         <Fragment>
-            <div className="d-flex justify-content-center containerParentPagedd">
+            <div className="d-flex justify-content-center containerParentPaged">
             <ul className='pagination'>
                 {
                     pageNumbers?
